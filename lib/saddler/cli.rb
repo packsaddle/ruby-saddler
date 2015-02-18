@@ -12,5 +12,10 @@ module Saddler
     def version
       puts "Saddler version #{::Saddler::VERSION}"
     end
+
+    desc 'report', 'Exec Report'
+    def report
+      puts 'done'
+    end
   end
 end
