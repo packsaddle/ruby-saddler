@@ -14,7 +14,20 @@ module Saddler
     end
 
     desc 'report', 'Exec Report'
+    option :data
+    option :file
     def report
+      data = \
+          if options[:data]
+                         options[:data]
+          elsif options[:file]
+            File.read(options[:file])
+          elsif !$stdin.tty?
+            ARGV.clear
+            ARGF.read
+          end
+
+      abort('no input') if !data || data.empty?
       puts 'done'
     end
   end
