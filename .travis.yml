@@ -1,17 +1,15 @@
-AllCops:
-  Exclude:
-    - 'bundle_bin/*'
-    - 'vendor/bundle/**/*'
-
-Style/Documentation:
-  Enabled: false
-
-Metrics/LineLength:
-  Max: 100
-
-Style/FileName:
-  Exclude:
-    - exe/*
-
-Style/RegexpLiteral:
-  MaxSlashes: 0
+language: ruby
+sudo: false
+rvm:
+  - 1.9
+  - 2.0
+  - 2.1
+  - 2.2
+before_install:
+  - gem update bundler
+notifications:
+  email:
+    - ogataken@gmail.com
+branches:
+  only:
+    - master
