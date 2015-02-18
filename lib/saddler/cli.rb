@@ -40,6 +40,7 @@ module Saddler
         reporter = ::Saddler::Reporter.new.add_reporter(options[:reporter], $stdout)
       end
 
+      abort('no reporter') unless reporter
       reporter.report(data, pass_options)
     end
   end
