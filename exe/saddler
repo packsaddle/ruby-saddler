@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require 'saddler'
+require 'saddler/cli'
+Saddler::CLI.start(ARGV)
