@@ -1,4 +1,4 @@
-require "saddler/version"
+require 'saddler/version'
 
 module Saddler
   # Your code goes here...
