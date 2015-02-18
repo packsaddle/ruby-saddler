@@ -1,6 +1,6 @@
 module Saddler
-  class Reporter
-    def add_reporter(reporter_type, output = nil)
+  module Reporter
+    def self.add_reporter(reporter_type, output = nil)
       reporter = custom_reporter_class(reporter_type)
       output = $stdout unless output
       reporter.new(output)
@@ -8,7 +8,7 @@ module Saddler
 
     # Copy from rubocop:
     # lib/rubocop/formatter/formatter_set.rb
-    def custom_reporter_class(specified_class_name)
+    def self.custom_reporter_class(specified_class_name)
       constant_names = specified_class_name.split('::')
       constant_names.shift if constant_names.first.empty?
       constant_names.reduce(Object) do |namespace, constant_name|

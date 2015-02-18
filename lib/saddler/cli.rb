@@ -37,7 +37,7 @@ module Saddler
 
       require options[:require] if options[:require]
       if(options[:reporter])
-        reporter = ::Saddler::Reporter.new.add_reporter(options[:reporter], $stdout)
+        reporter = ::Saddler::Reporter.add_reporter(options[:reporter], $stdout)
       end
 
       abort('no reporter') unless reporter
