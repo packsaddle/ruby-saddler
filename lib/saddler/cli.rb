@@ -16,7 +16,7 @@ module Saddler
     desc 'report', 'Exec Report'
     option :data
     option :file
-    option :repo
+    option :options, type: :hash, default: {}
     option :require
     option :reporter
     def report
@@ -32,8 +32,7 @@ module Saddler
 
       abort('no input') if !data || data.empty?
 
-      pass_options = {}
-      pass_options[:repo] = options[:repo] if options[:repo]
+      pass_options = options[:options]
 
       require options[:require] if options[:require]
       if(options[:reporter])
