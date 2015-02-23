@@ -4,3 +4,10 @@ git diff -z --name-only ee0e288...2956a73 \
    --require rubocop/formatter/checkstyle_formatter \
    --format RuboCop::Formatter::CheckstyleFormatter \
  > example/rubocop-result.xml
+
+GITHUB_ACCESS_TOKEN=token \
+bundle exec exe/saddler report \
+ --file example/rubocop-result.xml \
+ --require saddler/reporter/github \
+ --reporter Saddler::Reporter::Github::CommitReviewComment \
+ --options sha1:ce3b17679fee03a6a3c262a3ad2f881d5fb65ff7
