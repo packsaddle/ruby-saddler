@@ -1,0 +1,6 @@
+git diff -z --name-only ee0e288...2956a73 \
+ | xargs -0 rubocop-select \
+ | xargs rubocop \
+   --require rubocop/formatter/checkstyle_formatter \
+   --format RuboCop::Formatter::CheckstyleFormatter \
+ > example/rubocop-result.xml
