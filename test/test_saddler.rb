@@ -1,7 +1,11 @@
-require 'minitest_helper'
+require_relative 'helper'
 
-class TestSaddler < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::Saddler::VERSION
+module Saddler
+  class TestSaddler < Test::Unit::TestCase
+    test 'version' do
+      assert do
+        !::Saddler::VERSION.nil?
+      end
+    end
   end
 end
