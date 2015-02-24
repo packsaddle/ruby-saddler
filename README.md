@@ -23,6 +23,11 @@ It works!
 
 You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 
+## Reporters
+
+* [saddler-reporter-text](https://github.com/packsaddle/ruby-saddler-reporter-text)
+* [saddler-reporter-github](https://github.com/packsaddle/ruby-saddler-reporter-github)
+
 ## Installation
 
 Add this line to your application's Gemfile:
