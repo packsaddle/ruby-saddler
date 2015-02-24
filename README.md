@@ -3,7 +3,25 @@
 [![Gem Version](http://img.shields.io/gem/v/saddler.svg?style=flat)](http://badge.fury.io/rb/saddler)
 [![Build Status](http://img.shields.io/travis/packsaddle/ruby-saddler/master.svg?style=flat)](https://travis-ci.org/packsaddle/ruby-saddler)
 
-**checkstyle2anywhere**
+**checkstyle2anywhere**, you can exec any lint, security checker and tools.
+
+## Usage
+
+```
+git diff -z --name-only ..origin/master \
+ | xargs -0 rubocop-select \
+ | xargs rubocop \
+     --require rubocop/formatter/checkstyle_formatter \
+     --format RuboCop::Formatter::CheckstyleFormatter \
+ | checkstyle_filter-git diff ..origin/master \
+ | saddler report \
+    --require saddler/reporter/github \
+    --reporter Saddler::Reporter::Github::PullRequestReviewComment
+```
+
+It works!
+
+You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 
 ## Installation
 
@@ -20,10 +38,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install saddler
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
