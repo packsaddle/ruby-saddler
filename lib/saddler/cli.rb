@@ -22,7 +22,7 @@ module Saddler
     def report
       data = \
           if options[:data]
-                         options[:data]
+            options[:data]
           elsif options[:file]
             File.read(options[:file])
           elsif !$stdin.tty?
@@ -33,7 +33,7 @@ module Saddler
       abort('no input') if !data || data.empty?
 
       require options[:require] if options[:require]
-      if(options[:reporter])
+      if options[:reporter]
         reporter = ::Saddler::Reporter.add_reporter(options[:reporter], $stdout)
       end
 
