@@ -8,12 +8,12 @@
 ## Usage
 
 ```
-git diff -z --name-only ..origin/master \
+git diff -z --name-only origin/master \
  | xargs -0 rubocop-select \
  | xargs rubocop \
      --require rubocop/formatter/checkstyle_formatter \
      --format RuboCop::Formatter::CheckstyleFormatter \
- | checkstyle_filter-git diff ..origin/master \
+ | checkstyle_filter-git diff origin/master \
  | saddler report \
     --require saddler/reporter/github \
     --reporter Saddler::Reporter::Github::PullRequestReviewComment
@@ -27,6 +27,11 @@ You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 
 * [saddler-reporter-text](https://github.com/packsaddle/ruby-saddler-reporter-text)
 * [saddler-reporter-github](https://github.com/packsaddle/ruby-saddler-reporter-github)
+
+## Examples and Demo
+You can send pull request to repos below. Try this!
+
+* [TravisCI with Pull Request Review Comment](https://github.com/packsaddle/example-ruby-travis-ci)
 
 ## Installation
 
