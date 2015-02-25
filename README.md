@@ -32,6 +32,7 @@ You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 You can send pull request to repos below. Try this!
 
 * [TravisCI with Pull Request Review Comment](https://github.com/packsaddle/example-ruby-travis-ci)
+* [CircleCI with Pull Request Review Comment](https://github.com/packsaddle/example-circle_ci-pull_request_review)
 
 ## Installation
 
