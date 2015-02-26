@@ -5,8 +5,10 @@
 
 **checkstyle2anywhere**, you can exec any lint, security checker and tools.
 
+Pull Request Review Comment
 ![Pull Request Review Comment](https://cloud.githubusercontent.com/assets/75448/6392012/842ba6e2-bdff-11e4-84c3-bc180ac199bc.png "Pull Request Review Comment")
 
+Pull Request Comment
 ![Pull Request Comment](https://cloud.githubusercontent.com/assets/75448/6392013/892d1e5a-bdff-11e4-8ffb-f8ca93507662.png "Pull Request Comment")
 
 ## Usage
