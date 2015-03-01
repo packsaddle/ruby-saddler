@@ -1,8 +1,11 @@
 require 'logger'
 require 'saddler/reporter/text'
-require 'saddler/version'
-require 'saddler/reporter'
+require 'rexml/document'
+
 require 'saddler/error'
+require 'saddler/reporter'
+require 'saddler/validator'
+require 'saddler/version'
 
 module Saddler
   def self.default_logger

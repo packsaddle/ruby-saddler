@@ -30,17 +30,17 @@ module Saddler
       logger.debug(options)
 
       data = fetch_data(options)
+      Validator.valid?(data)
       require options[:require] if options[:require]
       reporter = add_reporter(options)
 
       reporter.report(data, options[:options])
     rescue StandardError => e
-      logger.error(e.message)
-      logger.error(e.backtrace)
       logger.error('input data')
       logger.error(data)
       logger.error('reporter')
       logger.error(reporter)
+      raise e
     end
 
     no_commands do
