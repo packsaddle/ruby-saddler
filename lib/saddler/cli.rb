@@ -41,12 +41,10 @@ module Saddler
         abort
       end
 
-      begin
-        reporter.report(data, options[:options])
-      rescue StandardError => e
-        logger.error(e.message)
-        logger.error(e.backtrace)
-      end
+      reporter.report(data, options[:options])
+    rescue StandardError => e
+      logger.error(e.message)
+      logger.error(e.backtrace)
     end
 
     no_commands do
