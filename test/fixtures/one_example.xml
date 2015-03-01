@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<checkstyle>
+  <file name='/Users/sane/work/ruby-study/saddler/example/invalid.rb'>
+    <error line='2' column='100' severity='info' message='Line is too long. [117/100]' source='com.puppycrawl.tools.checkstyle.Metrics/LineLength'/>
+  </file>
+</checkstyle>

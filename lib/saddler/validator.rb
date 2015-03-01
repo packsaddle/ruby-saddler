@@ -1,5 +1,6 @@
 module Saddler
   class Validator
+    # NOTE: This is easy check
     def self.valid?(data)
       REXML::Document.new(data)
       true
