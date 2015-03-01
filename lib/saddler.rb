@@ -1,6 +1,7 @@
 require 'logger'
 require 'saddler/version'
 require 'saddler/reporter'
+require 'saddler/error'
 
 module Saddler
   def self.default_logger
