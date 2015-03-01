@@ -37,6 +37,10 @@ module Saddler
     rescue StandardError => e
       logger.error(e.message)
       logger.error(e.backtrace)
+      logger.error('input data')
+      logger.error(data)
+      logger.error('reporter')
+      logger.error(reporter)
     end
 
     no_commands do
