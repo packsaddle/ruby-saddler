@@ -63,6 +63,7 @@ module Saddler
             ARGF.read
           end
 
+        logger.info('input data')
         logger.info(data)
         fail NoInputError if !data || data.empty?
 
