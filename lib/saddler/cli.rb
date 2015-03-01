@@ -36,6 +36,8 @@ module Saddler
 
       reporter.report(data, options[:options])
     rescue StandardError => e
+      logger.error('options')
+      logger.error(options)
       logger.error('input data')
       logger.error(data)
       logger.error('reporter')
