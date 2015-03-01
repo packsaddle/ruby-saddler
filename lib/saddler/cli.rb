@@ -43,6 +43,7 @@ module Saddler
         logger.error('no input')
         abort
       end
+      logger.info(data)
 
       require options[:require] if options[:require]
       if options[:reporter]
