@@ -19,7 +19,16 @@ module Saddler
     option :options, type: :hash, default: {}
     option :require
     option :reporter
+    option :debug, type: :boolean, default: false
+    option :verbose, type: :boolean, default: false
     def report
+      if options[:debug]
+        logger.level = Logger::DEBUG
+      elsif options[:verbose]
+        logger.level = Logger::INFO
+      end
+      logger.debug(options)
+
       data = \
           if options[:data]
             options[:data]
@@ -39,6 +48,12 @@ module Saddler
 
       abort('no reporter') unless reporter
       reporter.report(data, options[:options])
+    end
+
+    no_commands do
+      def logger
+        ::Saddler.logger
+      end
     end
   end
 end
