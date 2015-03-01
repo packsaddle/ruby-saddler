@@ -29,21 +29,7 @@ module Saddler
       end
       logger.debug(options)
 
-      data = \
-          if options[:data]
-            options[:data]
-          elsif options[:file]
-            File.read(options[:file])
-          elsif !$stdin.tty?
-            ARGV.clear
-            ARGF.read
-          end
-
-      if !data || data.empty?
-        logger.error('no input')
-        abort
-      end
-      logger.info(data)
+      data = fetch_data(options)
 
       require options[:require] if options[:require]
       if options[:reporter]
@@ -55,17 +41,33 @@ module Saddler
         abort
       end
 
-      begin
-        reporter.report(data, options[:options])
-      rescue StandardError => e
-        logger.error(e.message)
-        logger.error(e.backtrace)
-      end
+      reporter.report(data, options[:options])
+    rescue StandardError => e
+      logger.error(e.message)
+      logger.error(e.backtrace)
     end
 
     no_commands do
       def logger
         ::Saddler.logger
+      end
+
+      def fetch_data(options)
+        data = \
+          if options[:data]
+            options[:data]
+          elsif options[:file]
+            File.read(options[:file])
+          elsif !$stdin.tty?
+            ARGV.clear
+            ARGF.read
+          end
+
+        logger.info('input data')
+        logger.info(data)
+        fail NoInputError if !data || data.empty?
+
+        data
       end
     end
   end
