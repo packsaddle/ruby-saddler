@@ -30,16 +30,8 @@ module Saddler
       logger.debug(options)
 
       data = fetch_data(options)
-
       require options[:require] if options[:require]
-      if options[:reporter]
-        reporter = ::Saddler::Reporter.add_reporter(options[:reporter], $stdout)
-      end
-
-      unless reporter
-        logger.error('no reporter')
-        abort
-      end
+      reporter = add_reporter(options)
 
       reporter.report(data, options[:options])
     rescue StandardError => e
@@ -68,6 +60,14 @@ module Saddler
         fail NoInputError if !data || data.empty?
 
         data
+      end
+
+      def add_reporter(options)
+        reporter = Reporter.add_reporter(options[:reporter], $stdout) if options[:reporter]
+        fail NoReporterError unless reporter
+        logger.info('use reporter')
+        logger.info(reporter)
+        reporter
       end
     end
   end

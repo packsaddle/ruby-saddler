@@ -1,4 +1,5 @@
 require 'logger'
+require 'saddler/reporter/text'
 require 'saddler/version'
 require 'saddler/reporter'
 require 'saddler/error'
