@@ -28,7 +28,8 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
                  | xargs -0 rubocop-select)
 
   if [ "${TARGET_FILES}" == "" ]; then
-    echo "not found"
+    echo "no rubocop target found"
+    github-status-notifier notify --state success --context saddler/rubocop
     exit 0
   fi
 
