@@ -12,7 +12,10 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
 
   echo gem install
   gem install --no-document rubocop-select rubocop rubocop-checkstyle_formatter \
-              checkstyle_filter-git saddler saddler-reporter-github
+              checkstyle_filter-git saddler saddler-reporter-github \
+              github_status_notifier
+
+  github-status-notifier notify --state pending --context saddler/rubocop
 
   echo git diff
   git diff -z --name-only origin/master
@@ -56,6 +59,8 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
    | saddler report \
       --require saddler/reporter/github \
       --reporter Saddler::Reporter::Github::PullRequestReviewComment
+
+  github-status-notifier notify --exit-status $? --context saddler/rubocop
 fi
 
 exit 0
