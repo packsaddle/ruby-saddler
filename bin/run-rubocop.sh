@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ev
+set -v
 if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
   # Travis-CI
   #
@@ -17,13 +17,6 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
 
   github-status-notifier notify --state pending --context saddler/rubocop
 
-  echo git diff
-  git diff -z --name-only origin/master
-
-  echo rubocop-select
-  git diff -z --name-only origin/master \
-   | xargs -0 rubocop-select
-
   TARGET_FILES=$(git diff -z --name-only origin/master \
                  | xargs -0 rubocop-select)
 
@@ -33,24 +26,6 @@ if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; t
     exit 0
   fi
 
-  echo rubocop
-  # rubocop return 1 both detecting error and raise error
-  RUBOCOP_RESULT=$(git diff -z --name-only origin/master \
-   | xargs -0 rubocop-select \
-   | xargs rubocop \
-       --require rubocop/formatter/checkstyle_formatter \
-       --format RuboCop::Formatter::CheckstyleFormatter)
-  echo $RUBOCOP_RESULT
-
-  echo checkstyle_filter-git
-  git diff -z --name-only origin/master \
-   | xargs -0 rubocop-select \
-   | xargs rubocop \
-       --require rubocop/formatter/checkstyle_formatter \
-       --format RuboCop::Formatter::CheckstyleFormatter \
-   | checkstyle_filter-git diff origin/master
-
-  echo saddler
   git diff -z --name-only origin/master \
    | xargs -0 rubocop-select \
    | xargs rubocop \
