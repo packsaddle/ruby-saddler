@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
+# Copyright (c) 2015 azu
+# License MIT
 # https://github.com/jser/jser.github.io/blob/master/test/travis-spellcheck.sh
 if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
   gem install --no-document checkstyle_filter-git saddler saddler-reporter-github

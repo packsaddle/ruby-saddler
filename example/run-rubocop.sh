@@ -1,5 +1,7 @@
 #!/bin/bash
 set -v
+# Copyright (c) 2015 sanemat
+# License MIT
 # https://github.com/packsaddle/ruby-saddler/blob/master/bin/run-rubocop.sh
 if [ -n "${TRAVIS_PULL_REQUEST}" ] && [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
   # Travis-CI
