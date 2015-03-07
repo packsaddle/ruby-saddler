@@ -36,13 +36,25 @@ You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 * [saddler-reporter-text](https://github.com/packsaddle/ruby-saddler-reporter-text)
 * [saddler-reporter-github](https://github.com/packsaddle/ruby-saddler-reporter-github)
 
-## Examples and Demo
+## Demo
 You can send pull request to repos below. Try this!
 
 * [TravisCI with Pull Request Review Comment](https://github.com/packsaddle/example-travis_ci-pull_request_review)
 * [TravisCI with Pull Request Comment](https://github.com/packsaddle/example-travis_ci-pull_request)
 * [CircleCI with Pull Request Review Comment](https://github.com/packsaddle/example-circle_ci-pull_request_review)
 * [CircleCI with Pull Request Comment](https://github.com/packsaddle/example-circle_ci-pull_request)
+
+## Examples
+
+* [jser/jser.github.io/test/travis-spellcheck.sh](./example/travis-spellcheck.sh)
+* [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/ruy-rubocop.sh)
+
+## Articles
+
+### ja
+
+* [jser/jser.github.ioの記事をpull request時にLintする仕組み | Web Scratch](http://efcl.info/2015/03/04/linting-article/)
+* [変更したファイルにrubocopやjscsを実行して pull requestに自動でコメントする – Saddler - checkstyle to anywhere](http://packsaddle.org/articles/saddler-overview/)
 
 ## Installation
 
