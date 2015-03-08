@@ -47,7 +47,7 @@ You can send pull request to repos below. Try this!
 ## Examples
 
 * [jser/jser.github.io/test/travis-spellcheck.sh](./example/travis-spellcheck.sh)
-* [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/ruy-rubocop.sh)
+* [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/run-rubocop.sh)
 
 ## Articles
 
