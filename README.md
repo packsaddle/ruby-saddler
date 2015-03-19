@@ -51,9 +51,9 @@ You can send pull request to repos below. Try this!
 ## Examples
 
 * textlint
- * [jser/jser.github.io/test/travis-spellcheck.sh](./example/travis-spellcheck.sh)
+ * [jser/jser.github.io/test/travis-spellcheck.sh](./example/travis-spellcheck.sh) ([link](https://github.com/jser/jser.github.io/blob/6df31731656e0ebf04f84b92e5ae3d98096214b7/test/travis-spellcheck.sh))
 * RuboCop
- * [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/run-rubocop.sh)
+ * [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/run-rubocop.sh) ([link](https://github.com/packsaddle/ruby-saddler/blob/f0abab9d0c43a0a062c1f062000680a49ddb27a2/bin/run-rubocop.sh))
 * JSCS
  * [run-jscs.sh](./example/run-jscs.sh)
 
