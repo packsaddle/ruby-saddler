@@ -39,10 +39,12 @@ You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 ## Demo
 You can send pull request to repos below. Try this!
 
-* [TravisCI with Pull Request Review Comment (RuboCop)](https://github.com/packsaddle/example-travis_ci-pull_request_review)
-* [TravisCI with Pull Request Comment (RuboCop)](https://github.com/packsaddle/example-travis_ci-pull_request)
-* [CircleCI with Pull Request Review Comment (RuboCop)](https://github.com/packsaddle/example-circle_ci-pull_request_review)
-* [CircleCI with Pull Request Comment (RuboCop)](https://github.com/packsaddle/example-circle_ci-pull_request)
+* TravisCI
+ * [Pull Request Review Comment (RuboCop)](https://github.com/packsaddle/example-travis_ci-pull_request_review)
+ * [Pull Request Comment (RuboCop)](https://github.com/packsaddle/example-travis_ci-pull_request)
+* CircleCI
+ * [Pull Request Review Comment (RuboCop)](https://github.com/packsaddle/example-circle_ci-pull_request_review)
+ * [Pull Request Comment (RuboCop)](https://github.com/packsaddle/example-circle_ci-pull_request)
 
 ## Examples
 
