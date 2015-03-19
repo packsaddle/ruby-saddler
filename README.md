@@ -42,9 +42,11 @@ You can send pull request to repos below. Try this!
 * TravisCI
  * [Pull Request Review Comment (RuboCop)](https://github.com/packsaddle/example-travis_ci-pull_request_review)
  * [Pull Request Comment (RuboCop)](https://github.com/packsaddle/example-travis_ci-pull_request)
+ * [Pull Request Review Comment (JSCS)](https://github.com/packsaddle/example-travis_ci-pull_request_review-jscs)
 * CircleCI
  * [Pull Request Review Comment (RuboCop)](https://github.com/packsaddle/example-circle_ci-pull_request_review)
  * [Pull Request Comment (RuboCop)](https://github.com/packsaddle/example-circle_ci-pull_request)
+ * [Pull Request Review Comment (JSCS)](https://github.com/packsaddle/example-circle_ci-pull_request_review-jscs)
 
 ## Examples
 
