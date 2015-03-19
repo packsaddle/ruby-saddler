@@ -54,6 +54,8 @@ You can send pull request to repos below. Try this!
  * [jser/jser.github.io/test/travis-spellcheck.sh](./example/travis-spellcheck.sh)
 * RuboCop
  * [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/run-rubocop.sh)
+* JSCS
+ * [run-jscs.sh](./example/run-jscs.sh)
 
 ## Articles
 
