@@ -36,6 +36,23 @@ You can run this from any CI Service (e.g. circle-ci, travis-ci, jenkins, etc).
 * [saddler-reporter-text](https://github.com/packsaddle/ruby-saddler-reporter-text)
 * [saddler-reporter-github](https://github.com/packsaddle/ruby-saddler-reporter-github)
 
+## Requirement
+
+Set `GITHUB_ACCESS_TOKEN=__your_access_token__` to your environment variable.
+
+### TravisCI
+
+[Travis CI: Encryption keys](http://docs.travis-ci.com/user/encryption-keys/)
+
+```bash
+$ gem install travis
+$ travis encrypt -r <owner_name>/<repos_name> "GITHUB_ACCESS_TOKEN=<github_token>"
+```
+
+### CircleCI
+
+[Environment variables - CircleCI](https://circleci.com/docs/environment-variables)
+
 ## Demo
 You can send pull request to repos below. Try this!
 
