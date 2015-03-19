@@ -50,7 +50,8 @@ You can send pull request to repos below. Try this!
 
 ## Examples
 
-* [jser/jser.github.io/test/travis-spellcheck.sh (HTMLLint)](./example/travis-spellcheck.sh)
+* 
+* [jser/jser.github.io/test/travis-spellcheck.sh (textlint)](./example/travis-spellcheck.sh)
 * [packsaddle/ruby-saddler/bin/run-rubocop.sh (RuboCop)](./example/run-rubocop.sh)
 
 ## Articles
