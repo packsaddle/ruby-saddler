@@ -83,6 +83,29 @@ You can send pull request to repos below. Try this!
 * [jser/jser.github.ioの記事をpull request時にLintする仕組み | Web Scratch](http://efcl.info/2015/03/04/linting-article/)
 * [変更したファイルにrubocopやjscsを実行して pull requestに自動でコメントする – Saddler - checkstyle to anywhere](http://packsaddle.org/articles/saddler-overview/)
 
+## VS.
+
+### [HoundCI (web service)](https://houndci.com/)
+
+Easy to configure, only allow GitHub oAuth.
+Very quick response,
+because HoundCI uses not entire code base but pull request hook's payload.
+But HoundCI focuses on RuboCop and JavaScript linters wrapped by Rubygems.
+JavaScript libraries wrapped by Rubygems have code smells.
+
+### [Hound (oss)](https://github.com/thoughtbot/hound)
+
+You can host own HoundCI.
+If you like caring hosted rails application.
+
+### [Pronto](https://github.com/mmozuras/pronto)
+
+Pronto is good application, and pronto influences saddler.
+Pronto's command seems simple, but this is "tightly-coupled" command.
+Pronto requires pronto-SOME-WRAPPER, and you should maintain wrapper scripts.
+Almost all of linters have their own command line interface.
+Why don't you use that direct?
+
 ## Installation
 
 Add this line to your application's Gemfile:
