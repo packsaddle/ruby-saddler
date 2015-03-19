@@ -3,7 +3,7 @@
 [![Gem Version](http://img.shields.io/gem/v/saddler.svg?style=flat)](http://badge.fury.io/rb/saddler)
 [![Build Status](http://img.shields.io/travis/packsaddle/ruby-saddler/master.svg?style=flat)](https://travis-ci.org/packsaddle/ruby-saddler)
 
-**checkstyle2anywhere**, you can exec any lint, security checker and tools.
+**checkstyle2anywhere**, you can integrate any lint, security checker and tools with anywhere (e.g. GitHub Pull Request Review Comment.)
 
 ### Pull Request Review Comment
 
