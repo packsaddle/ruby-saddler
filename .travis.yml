@@ -12,9 +12,6 @@ after_script:
 notifications:
   email:
   - ogataken@gmail.com
-branches:
-  only:
-  - master
 env:
   global:
     secure: MNPyYmOIa7mHfXELfUG0oYUxIDq3GYRhpWCZwg8q0JrstFO1Zex6db/Epb/WaQwaduG95Du6LsZ/gi+NZt6r1Ei5iLo1pzaKCOziHh8xizpAk5Bnvf5JeDN/SmUgfMMgpW3IK33HLQtPcMuvAKj6ybKa1Kbbh1XBMFQo8vaSCvQ=
