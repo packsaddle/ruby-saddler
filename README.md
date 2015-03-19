@@ -85,17 +85,17 @@ You can send pull request to repos below. Try this!
 
 ## VS.
 
-### [HoundCI (web service)](https://houndci.com/)
+### [Hound (web service)](https://houndci.com/)
 
 Easy to configure, only allow GitHub oAuth.
 Very quick response,
-because HoundCI uses not entire code base but pull request hook's payload.
-But HoundCI focuses on RuboCop and JavaScript linters wrapped by Rubygems.
+because Hound uses not entire code base but pull request hook's payload.
+But Hound focuses on RuboCop and JavaScript linters wrapped by Rubygems.
 JavaScript libraries wrapped by Rubygems have code smells.
 
 ### [Hound (oss)](https://github.com/thoughtbot/hound)
 
-You can host own HoundCI.
+You can host *own* Hound.
 If you like caring hosted rails application.
 
 ### [Pronto](https://github.com/mmozuras/pronto)
