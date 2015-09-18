@@ -122,6 +122,27 @@ Almost all of linters have their own command line interface.
 Why don't you use that direct?
 
 
+## FAQ
+
+Q: Is there the way to share in the command line?
+
+A: I think that sharing the command line is not a simple solution.
+
+We can call `saddler report` multiple times.
+If we want to run Saddler only once, we can create "merged checkstyle file" before calling `saddler report`.
+
+```
+merge-checkstyle (command-a ...) (command-b ...) \
+| saddler report ...
+```
+
+This requires `merge-checkstyle` command, I'm not sure that this command exists. I search "checkstyle" in rubygems, but I don't find such gem.
+
+
+Q: Does Saddler support using both the text and Github reporters simultaneously?
+
+A: Use `tee`. See [Saddler::Reporter::Text and Saddler::Reporter::Github::PullRequestReviewComment](./example/run-simultaneously.sh).
+
 ## Installation
 
 Add this line to your application's Gemfile:
