@@ -136,7 +136,7 @@ merge-checkstyle (command-a ...) (command-b ...) \
 | saddler report ...
 ```
 
-This requires `merge-checkstyle` command, I don't know this command exists. I search "checkstyle" in rubygems, but I don't find such gem.
+This requires `merge-checkstyle` command, I'm not sure that this command exists. I search "checkstyle" in rubygems, but I don't find such gem.
 
 
 Q: Does Saddler support using both the text and Github reporters simultaneously?
