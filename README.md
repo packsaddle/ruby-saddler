@@ -75,6 +75,9 @@ You can send pull request to repos below. Try this!
  * [packsaddle/ruby-saddler/bin/run-rubocop.sh](./example/run-rubocop.sh) ([link](https://github.com/packsaddle/ruby-saddler/blob/f0abab9d0c43a0a062c1f062000680a49ddb27a2/bin/run-rubocop.sh))
 * JSCS
  * [run-jscs.sh](./example/run-jscs.sh)
+* Use multiple reporters simultaneously
+ * [Saddler::Reporter::Text and Saddler::Reporter::Github::PullRequestReviewComment](./example/run-simultaneously.sh)
+
 
 ## Articles
 
