@@ -86,6 +86,8 @@ You can send pull request to repos below. Try this!
     * [run-jscs.sh](./example/run-jscs.sh)
 * Use multiple reporters simultaneously
     * [Saddler::Reporter::Text and Saddler::Reporter::Github::PullRequestReviewComment](./example/run-simultaneously.sh)
+* Gradle android - Checkstyle, FindBugs, PMD, CPD, Android Lint
+    * [noboru-i/android-saddler-sample/scripts/saddler.sh](./example/run-gradle-android.sh) ([link](https://github.com/noboru-i/android-saddler-sample/blob/626fc93c6693144bd069db563836a856f401864a/scripts/saddler.sh))
 
 
 ## Articles
