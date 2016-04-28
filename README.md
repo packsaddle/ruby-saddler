@@ -99,6 +99,8 @@ You can send pull request to repos below. Try this!
 * [CircleCI - Androidのコードを自動で解析し、GitHubのpull requestにコメントする - Qiita](http://qiita.com/noboru_i/items/2f30296db1c8a6dfbd9b)
 * [pull requestした差分にrubocopの結果を自動でコメントしてCircleCIをfailedにするよ - Qiita](http://qiita.com/nifuramu/items/e7490e86b7b67d99ac87)
 
+### vi
+* [Saddler – công cụ giúp CI chạy rubocop và comment lỗi trực tiếp vào pull request. – Appconus Blog](http://blog.appconus.com/2015/11/19/saddler-cong-cu-giup-ci-chay-rubocop-va-comment-loi-truc-tiep-vao-pull-request/)
 
 ## VS.
 
