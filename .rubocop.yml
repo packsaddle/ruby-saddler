@@ -14,4 +14,4 @@ Style/FileName:
     - exe/*
 
 Style/RegexpLiteral:
-  MaxSlashes: 0
+  EnforcedStyle: mixed
