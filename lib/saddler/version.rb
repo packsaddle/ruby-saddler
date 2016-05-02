@@ -1,3 +1,3 @@
 module Saddler
-  VERSION = '0.1.2.beta'
+  VERSION = '0.1.2.beta'.freeze
 end

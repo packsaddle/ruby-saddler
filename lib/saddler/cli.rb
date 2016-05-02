@@ -63,14 +63,14 @@ module Saddler
 
         logger.info('input data')
         logger.info(data)
-        fail NoInputError if !data || data.empty?
+        raise NoInputError if !data || data.empty?
 
         data
       end
 
       def add_reporter(options)
         reporter = Reporter.add_reporter(options[:reporter], $stdout) if options[:reporter]
-        fail NoReporterError unless reporter
+        raise NoReporterError unless reporter
         logger.info('use reporter')
         logger.info(reporter)
         reporter
