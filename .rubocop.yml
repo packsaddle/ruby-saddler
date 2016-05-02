@@ -12,3 +12,6 @@ Metrics/LineLength:
 Style/FileName:
   Exclude:
     - exe/*
+
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
