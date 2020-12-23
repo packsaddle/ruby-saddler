@@ -1,0 +1,35 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@1.1.2
+
+executors:
+  linux:
+    docker:
+      - image: cimg/base:stable
+
+jobs:
+  test:
+    parameters:
+      os:
+        type: executor
+      ruby-version:
+        type: string
+    executor: << parameters.os >>
+    steps:
+      - checkout
+      - ruby/install:
+          version: << parameters.ruby-version >>
+      - run:
+          name: bundle install
+          command: bundle install
+      - run:
+          name: test
+          command: bundle exec rake
+workflows:
+  all-tests:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              os: [linux]
+              ruby-version: ["2.5", "2.6", "2.7"]
